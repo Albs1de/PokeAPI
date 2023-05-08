@@ -6,7 +6,10 @@ function getPokemonWithName(name) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data.name);
+      const pokemonName = data.name;
+      const imageUrl = data.sprites.front_default;
+
+      return { pokemonName, imageUrl };
     });
 }
 export { getPokemonWithName };

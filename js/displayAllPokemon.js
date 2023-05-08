@@ -1,9 +1,12 @@
 import { getRandomPokemon } from "./FetchAPIData.js";
+import SearchBar from "./InputSearchPokemonName.js";
 import createCard from "./PokeCards.js";
 
 function returnAllPokemon() {
   const cardContainer = document.getElementById("card-container");
+  const inputDiv = document.querySelector(".input-div");
 
+  inputDiv.appendChild(SearchBar());
   for (let i = 1; i <= 100; i++) {
     getRandomPokemon(i).then(({ pokemonName, imageUrl }) => {
       const card = createCard(

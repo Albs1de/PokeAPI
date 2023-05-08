@@ -1,0 +1,10 @@
+.input-div {
+  padding: 10px;
+  margin-bottom: 5px; /* Abstand zwischen Input-Feld und den Cards */
+}
+
+.input-button {
+  margin-left: 10px;
+  border-radius: 50%; /* Runde Form für den Button */
+  padding: 8px 12px; /* Ändern Sie die Werte für den gewünschten Abstand im Button */
+}
