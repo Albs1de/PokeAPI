@@ -1,5 +1,6 @@
-"use strict";
-
+import { getPokemonWithName } from "./FetchPokemonName.js";
+import createCard from "./PokeCards.js";
+import { returnAllPokemon } from "./displayAllPokemon.js";
 function SearchBar() {
   const InputDiv = document.createElement("div");
   InputDiv.className = "input-div";
@@ -42,8 +43,29 @@ function SearchBar() {
   });
 
   //Event-Listener für Button
-  inputButton.addEventListener("click", () => {
+  inputButton.addEventListener("click", async () => {
     changeBtnImage(btnImage);
+
+    // Get the input value and fetch the data
+    const inputValue = searchInput.value;
+    const result = await getPokemonWithName(inputValue);
+
+    if (result) {
+      if (inputValue.trim() !== "") {
+        const hideCardContainer = document.getElementById("card-container");
+        hideCardContainer.innerHTML = "";
+        const card = createCard(
+          result.imageUrl,
+          result.pokemonName,
+          "blablab",
+          "+",
+          "Wohin?"
+        );
+        hideCardContainer.appendChild(card);
+      }
+    } else {
+      console.log("Pokemon not found.");
+    }
   });
 
   InputDiv.appendChild(searchInput);

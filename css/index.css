@@ -34,3 +34,64 @@ tr:nth-child(odd) td {
 caption {
   padding: 10px;
 }
+body {
+  background-color: #1d3557 !important;
+}
+.navbar {
+  background-color: #1d3557 !important;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar a:hover {
+  color: #457b9d !important;
+}
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #ccc;
+}
+.card {
+  background-color: #f1faee !important;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-button {
+  margin-right: 10px;
+}
+@media (max-width: 480px) {
+  .input-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-button {
+    margin-right: 10px;
+  }
+  .card {
+    margin-bottom: 5px;
+    justify-content: center;
+  }
+
+  #poke-png {
+    margin-left: 100%;
+  }
+}

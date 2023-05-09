@@ -4,4 +4,3 @@ import { getPokemonWithName } from "./FetchPokemonName.js";
 import { returnAllPokemon } from "./displayAllPokemon.js";
 
 returnAllPokemon();
-console.log(getPokemonWithName("squirtle"));
